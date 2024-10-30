@@ -1,0 +1,286 @@
+:root {
+    --main-color: #EEEFF1;
+    --base-color: #fff;
+    --special-color: #34547A;
+    --unique-color: #727272;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header {
+    background-color:var(--main-color);
+    min-height: 700px;
+    padding: 80px 0;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+h2 {
+    text-align: center;
+}
+
+.hero__title,
+.about__title {
+    font-weight: 500;
+} 
+
+.navbar {
+    margin-bottom: 162px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.nav__link {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.nav__link:hover {
+    text-decoration: underline;
+}
+
+.nav__link--active,
+.nav__link:hover {
+    color: var(--special-color);
+}
+
+.hero__text,
+.hero__btn,
+.about__text,
+.nav__link,
+.work-header__text {
+    line-height: 1.64rem;
+}
+
+.hero__title {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 4.92rem;
+    margin-bottom: 60px;
+}
+
+.hero__text {
+    margin-bottom: 65px;
+    color: var(--unique-color);
+    max-width: 540px;
+}
+
+.hero__btn {
+    display: inline-block;
+    min-width: 225px;
+    background-color: var(--special-color);
+    color: var(--base-color) ;
+    text-decoration: none;
+    padding: 20px 2%;   
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-bottom: 140px;
+}
+
+.hero__btn:hover {
+    background-color: #4e729d;
+}
+
+.about {
+    margin: 0 auto;
+    max-width: 600px;
+    padding-top: 112px;
+    padding-bottom: 100px;
+    background-color: var(--base-color);
+}
+
+.about__title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 3.92rem;
+    margin-bottom: 40px;
+}
+
+.about-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 3%;
+}
+
+.about__text {
+    text-align: center;
+}
+
+.project {
+    background-color: var(--special-color);
+    color: var(--base-color);
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 100px 0;
+}
+
+.project__item {
+    display: flex;
+    gap: 20px;
+    margin-right: 45px;
+}
+
+.project__description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.project__number,
+.footer__bg {
+    font-size: 1.31rem;
+}
+
+.work {
+    background-color: var(--main-color);
+    margin: 0 auto;
+}
+
+.work-header {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 100px 3% 50px;
+    text-align: center;
+}
+
+.work-header__title {
+    font-size: 2rem;
+    line-height: 2.34rem;
+    margin-bottom: 50px;
+}
+
+.work-header__text,
+.about__text {
+    color: var(--unique-color);
+}
+
+.work-video {
+    margin: 0 auto;
+    max-width: 1110px;
+    min-height: 600px;
+    padding-bottom: 100px;
+}
+
+.work-video iframe {
+    width: 100%;
+    min-height: 600px;
+}
+
+footer {
+    background-color: var(--special-color);
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.footer__bg,
+.footer__sm {
+    color: var(--base-color);
+}
+
+.footer__sm {
+    margin-top: 1.25rem;
+    font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    .nav {
+        max-width: 611px;
+    }
+
+    .hero__text {
+        width: 540px;
+    }
+
+    .work-video iframe {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    .about-container {
+        margin-bottom: 40px;
+    }
+
+    .project-container {
+        justify-content: center;
+        gap: 30px;
+        padding: 50px 0;
+    }
+
+    .project__item {
+        justify-content: center;
+        flex-basis: 25%;
+    }
+
+    .work-header {
+        padding: 60px 3% 40px;
+    }
+
+    .work-header__title {
+        margin-bottom: 40px;
+    }
+
+    .work-video {
+        padding-bottom: 60px;
+    }
+
+    .work-video iframe {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .project-container {
+        gap: 30px;
+        padding: 50px 0;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .project-container {
+        margin: 0 auto;
+        width: 70%;
+        gap: 50px;
+        padding: 50px 0;
+    }
+}
+
+
