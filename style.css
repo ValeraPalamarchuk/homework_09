@@ -28,7 +28,7 @@ body {
 }
 
 .container {
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     padding: 0 3%;
 }
@@ -44,6 +44,53 @@ h2 {
 
 .navbar {
     margin-bottom: 162px;
+}
+
+.menu-container {
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; 
+    height: 25px; 
+    cursor: pointer;
+}
+
+.menu span {
+    display: block;
+    height: 4px; 
+    background-color: #333; 
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.dropdown-menu {
+    display: none; 
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-container.active .dropdown-menu {
+    display: block;
 }
 
 .nav {
@@ -143,8 +190,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .project__item {
@@ -190,13 +236,12 @@ h2 {
 .work-video {
     margin: 0 auto;
     max-width: 1110px;
-    min-height: 600px;
     padding-bottom: 100px;
 }
 
 .work-video iframe {
     width: 100%;
-    min-height: 600px;
+    max-height: 1000px;
 }
 
 footer {
@@ -216,21 +261,120 @@ footer {
     font-size: 0.8rem;
 }
 
-@media screen and (min-width: 768px) {
-    .nav {
-        max-width: 611px;
+
+
+@media (min-width: 375px) {
+    .navbar {
+        margin-bottom: 70px;
+    }
+
+    .hero__btn {
+        margin-bottom: 90px;
     }
 
     .hero__text {
-        width: 540px;
+        width: 300px;
+    }
+
+    .nav {
+        display: none;
+    }
+    
+    .about {
+        width: 70%;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-row-gap: 30px;
+    }
+
+    .project__item {
+        margin-left: 25%;
     }
 
     .work-video iframe {
-        height: 200px;
+        height: 300px;
     }
+    
+    .container {
+        width: 85%;
+    }
+
 }
 
-@media screen and (max-width: 992px) {
+@media (min-width: 560px){
+    .navbar {
+        margin-bottom: 50px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hero__text {
+        width: 300px;
+    }
+    
+    .about {
+        width: 75%;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-row-gap: 30px;
+    }
+    
+    .project__item {
+        margin-left: 45px;
+    }
+
+    .work-video iframe {
+        height: 350px;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+
+    .project-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 30px;
+    }
+
+    .menu-container {
+        display: none;
+    }
+
+    .nav {
+        max-width: 611px;
+        display: flex;
+    }
+
+    .hero__text {
+        width: 500px;
+    }
+
+    .work-video iframe {
+        height: 400px;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
     .about {
         padding-top: 60px;
         padding-bottom: 80px;
@@ -240,14 +384,15 @@ footer {
     }
 
     .project-container {
-        justify-content: center;
-        gap: 30px;
-        padding: 50px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-row-gap: 30px;
     }
 
     .project__item {
         justify-content: center;
-        flex-basis: 25%;
+        flex-basis: 15%;
     }
 
     .work-header {
@@ -258,29 +403,19 @@ footer {
         margin-bottom: 40px;
     }
 
-    .work-video {
-        padding-bottom: 60px;
+
+}
+
+@media screen and (min-width: 1400px) {
+    .project-container {
+        display: flex;
     }
 
     .work-video iframe {
         height: 500px;
     }
+
 }
 
-@media screen and (max-width: 1200px) {
-    .project-container {
-        gap: 30px;
-        padding: 50px 0;
-    }
-}
-
-@media screen and (max-width: 1800px) {
-    .project-container {
-        margin: 0 auto;
-        width: 70%;
-        gap: 50px;
-        padding: 50px 0;
-    }
-}
 
 

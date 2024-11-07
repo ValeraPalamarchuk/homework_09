@@ -14,6 +14,20 @@
         <header class="header">
             <div class="container">
                 <nav class="navbar">
+                    <div class="menu-container" onclick="toggleMenu()">
+                        <div class="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="#">Главная</a>
+                            <a href="#">Об авторе</a>
+                            <a href="#">Работы</a>
+                            <a href="#">Процесс</a>
+                            <a href="#">Контакты</a>
+                        </div>
+                    </div>
                     <ul class="nav">
                         <li class="nav__item"><a href="#" class="nav__link nav__link--active">Главная</a></li>
                         <li class="nav__item"><a href="#" class="nav__link">Об авторе</a></li>
@@ -22,7 +36,7 @@
                         <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                     </ul>
                 </nav>
-                <section class="hero designer">
+                <section class="hero__designer">
                     <h1 class="hero__title">Дизайн и верстка</h1>
                     <p class="hero__text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.</p>
                     <a href="" class="hero__btn">Написать мне</a>
@@ -101,5 +115,10 @@
             </div>
         </footer>
     </div>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu-container").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
